@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap");
+
+@font-face {
+  font-family: "Fondamento";
+  src: url("../public/fonts/Fondamento-VariableFont_wght.ttf");
+}
