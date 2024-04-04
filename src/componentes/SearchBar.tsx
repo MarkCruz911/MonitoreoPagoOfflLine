@@ -30,7 +30,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   const SearchAsociacion = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL_LOCAL_ASOCIACION}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL_WEB_ASOCIACION}`);
       //console.log("Los datos de la asociacion aqui: ", response.data);
       setDataResponse(response.data);
     } catch (lxError) {
