@@ -5,20 +5,6 @@ import TaskList from './TaskList';
 import Pagination from './Pagination';
 import axios from 'axios';
 
-interface Data {
-    Tarea: number,
-    Factura: number,
-    Nombre: string,
-    TipoTarea: number,
-    Estado: number,
-    Intentos: number,
-    FechaCreacion: string,
-    HoraCreacion: string,
-    FechaTerminado: string,
-    HoraTerminado: string,
-    Log: string,
-}
-
 interface filtro {
     fechaCreacion?: string,
     fechaTerminado?: string,
