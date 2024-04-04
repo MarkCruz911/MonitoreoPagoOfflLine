@@ -5,9 +5,9 @@ import DetailView from './componentes/DetailView';
 function App() {
 
   return (
-    <div className="flex h-screen">
-      <Sidebar />
-      <DetailView />
+    <div className="flex h-screen w-screen overflow-hidden flex flex-row">
+      <Sidebar/>
+      <DetailView/>
     </div>
   );
 }

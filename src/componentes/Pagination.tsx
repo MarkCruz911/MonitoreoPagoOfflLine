@@ -1,5 +1,6 @@
 // Pagination.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import './Pagination.css'; // Importa tus estilos personalizados
 
 interface PaginationProps {
   currentPage: number;
@@ -8,29 +9,41 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
-  const getPageNumbers = () => {
-    const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push(i);
+  const [active, setActive] = useState(currentPage);
+
+  useEffect(() => {
+    setActive(currentPage);
+  }, [currentPage]);
+
+  const next = () => {
+    if (active < totalPages) {
+      const nextPage = active + 1;
+      setActive(nextPage);
+      onPageChange(nextPage);
     }
-    return pages;
+  };
+
+  const prev = () => {
+    if (active > 1) {
+      const prevPage = active - 1;
+      setActive(prevPage);
+      onPageChange(prevPage);
+    }
   };
 
   return (
-    <div className="flex justify-center mt-4">
-      <nav>
-        <ul className="pagination flex space-x-2">
-          {getPageNumbers().map(page => (
-            <li key={page} className={`mx-1 ${currentPage === page ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-full h-8 w-8 flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-blue-500 hover:text-white`}>
-              <button onClick={() => onPageChange(page)}>
-                {page}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <div className='pagination'>
+      <button className='pagination-button' onClick={prev} disabled={active === 1}>
+        &lt;
+      </button>
+      <p className='pagination-text'>
+        Page <strong>{active}</strong> of <strong>{totalPages}</strong>
+      </p>
+      <button className='pagination-button' onClick={next} disabled={active === totalPages}>
+        &gt;
+      </button>
     </div>
   );
-}
+};
 
 export default Pagination;

@@ -1,12 +1,17 @@
 // Sidebar.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 //import empresaImage from './empresa-logo.png'; // Importa la imagen de la empresa desde tu directorio
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   const [selectedOption, setSelectedOption] = useState<string>('Tareas');
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
+  };
+
+  const handleLogout = () => {
+    // Aquí puedes implementar la lógica para desloguear al usuario
+    console.log('Usuario deslogueado');
   };
 
   return (
@@ -27,6 +32,15 @@ const Sidebar: React.FC = () => {
           onClick={() => handleOptionClick('Otra Opción')}
         >
           Otra Opción
+        </li>
+       
+      </ul>
+      <ul className="mt-auto">
+        <li 
+          className="text-gray-500 cursor-pointer px-2 py-1 rounded-md hover:bg-blue-100" 
+          onClick={handleLogout}
+        >
+          Cerrar Sesion
         </li>
       </ul>
     </aside>
