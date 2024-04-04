@@ -24,7 +24,7 @@ const DetailView = () => {
     const fetchData = async (filtro: filtro) => {
         
         try {
-            console.log("FILTRO: ", filtro);
+            console.log("FILTROSS: ", filtro);
             const fechaActual = new Date().toISOString().split('T')[0];
             const url = filtro ? `${import.meta.env.VITE_API_URL_LOCAL_TAREAS}?fechaCreacion=${filtro?.fechaCreacion}&estado=${filtro?.estado}&tarea=${filtro?.tarea}&factura=${filtro?.factura}&fechaTerminado=${filtro?.fechaTerminado}&asociacion=${filtro?.asociacion}` : `http://localhost:3000/tareas?fechaCreacion=${fechaActual}`;
             const response: any = await axios.get(url); // Reemplaza con la URL de tu API
