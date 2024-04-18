@@ -58,10 +58,12 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   return (
     <div className="flex flex-wrap items-center gap-4 mb-4 h-[20%]">
+      {/*
+      Descomentar para habilitar la busqueda por factura
       <div>
         <label htmlFor="tarea" className="block text-sm font-medium text-gray-700">Buscar por Tarea:</label>
         <input type="text" id="tarea" placeholder="ID de la tarea" className="p-2 border rounded-md" onChange={(e) => setTarea(Number(e.target.value))} />
-      </div>
+      </div>*/}
       <div>
         <label htmlFor="factura" className="block text-sm font-medium text-gray-700">Buscar por Factura:</label>
         <input type="text" id="factura" placeholder="ID de la factura" className="p-2 border rounded-md" onChange={(e) => setFactura(Number(e.target.value))} />

@@ -1,6 +1,5 @@
 // Sidebar.tsx
 import { useState } from 'react';
-//import empresaImage from './empresa-logo.png'; // Importa la imagen de la empresa desde tu directorio
 
 const Sidebar = () => {
   const [selectedOption, setSelectedOption] = useState<string>('Tareas');
