@@ -23,11 +23,11 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   const [fechaCreacion, setFechaCreacion] = useState<any>();
   const [fechaTerminado, setFechaTerminado] = useState<any>();
   const [estado, setEstado] = useState<any>();
-  const [tarea, setTarea] = useState<any>();
+  //const [tarea, setTarea] = useState<any>();
   const [factura, setFactura] = useState<any>();
   const [dataResponse, setDataResponse] = useState<Asociacion[]>([]);
   const [asociacion, setAsociacion] = useState<any>();
-
+  const tarea:any='';
   const SearchAsociacion = async () => {
     try {
       const response = await axios.get(`${import.meta.env.VITE_API_URL_WEB_ASOCIACION}`);
