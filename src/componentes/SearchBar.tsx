@@ -89,15 +89,6 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
         </select>
       </div>
       <div>
-        <label htmlFor="puntoventa" className="block text-sm font-medium text-gray-700">Buscar por Punto de Venta:</label>
-        <select id="puntoventa" className="p-2 border rounded-md">
-          <option value="">Seleccione un punto de venta</option>
-          <option value="1">Pollo Campeon</option>
-          <option value="2">Pago Facil</option>
-          <option value="3">Syscoop Solution</option>
-        </select>
-      </div>
-      <div>
         <label htmlFor="fechaCreacion" className="block text-sm font-medium text-gray-700">Buscar por Fecha de Creación:</label>
         <input
           type="date"
