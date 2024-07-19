@@ -14,16 +14,18 @@
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.2",
     "axios": "^1.6.8",
+    "orbit-controls-es6": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-tsparticles":"^2.0.6",
-    "tsparticles":"^2.0.6",
-    "tsparticles-slim":"^2.0.6"
+    "react-tsparticles": "^2.0.6",
+    "tsparticles": "^2.0.6",
+    "tsparticles-slim": "^2.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/three": "^0.164.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",

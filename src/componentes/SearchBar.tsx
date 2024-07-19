@@ -89,24 +89,6 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
         </select>
       </div>
       <div>
-        <label htmlFor="empresa" className="block text-sm font-medium text-gray-700">Buscar por Empresa:</label>
-        <select id="empresa" className="p-2 border rounded-md">
-          <option value="">Seleccione una empresa</option>
-          <option value="1">Pollo Campeon</option>
-          <option value="2">Pago Facil</option>
-          <option value="3">Syscoop Solution</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="sucursal" className="block text-sm font-medium text-gray-700">Buscar por Sucursal:</label>
-        <select id="sucursal" className="p-2 border rounded-md">
-          <option value="">Seleccione una sucursal</option>
-          <option value="1">Pollo Campeon</option>
-          <option value="2">Pago Facil</option>
-          <option value="3">Syscoop Solution</option>
-        </select>
-      </div>
-      <div>
         <label htmlFor="puntoventa" className="block text-sm font-medium text-gray-700">Buscar por Punto de Venta:</label>
         <select id="puntoventa" className="p-2 border rounded-md">
           <option value="">Seleccione un punto de venta</option>

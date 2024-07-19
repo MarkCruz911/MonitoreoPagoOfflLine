@@ -39,13 +39,9 @@ const DetailView = () => {
             const tasksForPage = await tasksData.slice(startIndex, endIndex);
             setDataPerPage(tasksForPage);
             console.log("DATOS POR PAGINA: ", dataPerPage);
-
         } catch (error) {
-
             console.error('Error al cargar los datos:', error);
-
         }
-
     };
 
     const getDataPerPage = async () => {

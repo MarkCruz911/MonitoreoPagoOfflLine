@@ -1,17 +1,19 @@
 import './App.css'
-import Sidebar from './componentes/sidebar';
-import DetailView from './componentes/DetailView';
+import { Route, Routes } from 'react-router-dom';
+import Index from './componentes/Index';
+import Imagen from './componentes/Imagen';
 
 function App() {
 
   return (
-    <>
-    <div className="flex h-screen w-screen overflow-hidden flex flex-row">
-      <Sidebar/>
-      <DetailView/>
+    <div className='App'>
+      <Routes>
+        <Route>
+          <Route path="/" element={<Index />} />
+          <Route path="/imagen" element={<Imagen />} />
+        </Route>
+      </Routes>
     </div>
-    
-    </>
   );
 }
 

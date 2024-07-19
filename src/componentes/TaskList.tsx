@@ -23,6 +23,7 @@ interface TaskListProps {
 const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
 
   const [taskList, setTaskList] = useState<Task[]>([]);
+  
   useEffect(() => {
     setTaskList(tasks);
   }, [tasks]);
